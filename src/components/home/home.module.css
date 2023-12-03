@@ -1,0 +1,162 @@
+.section {
+   height: 100vh;
+   background-image: url("/src/assets/images/Honeymoon-Places-in-December-in-India.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   padding-bottom: 40px;
+   position: relative;
+}
+.section::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: linear-gradient(
+      to top,
+      white,
+      rgb(255 255 255 / 30%),
+      transparent
+   );
+   opacity: 0.9;
+}
+
+.section .menue {
+   display: block;
+   width: 35px;
+   position: absolute;
+   right: 25px;
+   top: 25px;
+}
+
+.section .menue img {
+   max-width: 100%;
+}
+
+.section .navbar {
+   width: 100%;
+   height: 70px;
+   padding: 25px 30px;
+   margin-bottom: 40px;
+   position: relative;
+}
+
+.section .navbar .hideMenue {
+   display: none;
+   list-style-type: none;
+   font-size: 22px;
+}
+
+.section .navbar .showMenue {
+   display: flex;
+   flex-direction: column;
+   background-color: var(--main-color);
+   gap: 20px;
+   position: absolute;
+   z-index: 100;
+   padding: 20px 50px;
+   width: 60%;
+   top: 70px;
+   right: 25px;
+   list-style-type: none;
+   font-size: 22px;
+}
+.section .navbar ul li {
+   cursor: pointer;
+}
+.section .navbar ul .language {
+   color: white;
+   width: 100%;
+   border-bottom: 1px solid white;
+   padding: 5px;
+   position: relative;
+}
+.section .navbar ul .language span {
+   border: 8px solid;
+   border-color: white transparent transparent;
+   position: absolute;
+   left: 0;
+   top: 50%;
+}
+
+.section .card {
+   width: 100%;
+   border-radius: 20px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.section .card img {
+   max-width: 100%;
+   width: 1000px;
+   object-fit: cover;
+   aspect-ratio: 2 / 1;
+   border-radius: 20px;
+}
+
+.section .card h3 {
+   width: 100%;
+   position: absolute;
+   bottom: 30px;
+   left: 50%;
+   transform: translate(-50%);
+   text-align: center;
+   padding: 20px;
+   color: white;
+}
+
+.section .sliderContainer {
+   width: 90%;
+   margin: 10px auto;
+}
+
+.section .logo {
+   width: 130px;
+   position: absolute;
+   top: 25px;
+   left: 25px;
+   z-index: 1;
+}
+
+@media (min-width: 576px) {
+   .section .menue {
+      display: none;
+   }
+   .section .navbar .hideMenue {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 50px;
+      align-items: center;
+      position: static;
+      width: 100%;
+      padding: 0;
+      background-color: transparent;
+   }
+   .section .navbar ul .language {
+      color: white;
+      width: 90px;
+   }
+   .section .card h3 {
+      font-size: 28px;
+   }
+}
+
+@media (min-width: 768px) {
+   .section .navbar {
+      padding: 25px 90px;
+   }
+
+   .section .mainImage h3 {
+      font-size: 38px;
+   }
+}
+
+@media (min-width: 992px) {
+   .section .card h3 {
+      font-size: 40px;
+   }
+}

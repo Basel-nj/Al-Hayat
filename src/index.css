@@ -1,0 +1,18 @@
+@font-face {
+   font-family: "JannaLTRegular";
+   src: local("JannaLTRegular"),
+      url(./fonts/Janna\ LT\ Regular.ttf) format("truetype");
+}
+
+:root {
+   --main-color: #00a7e8;
+   --alt-color: #d6f0f8;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   text-align: right;
+   font-family: JannaLTRegular;
+}
