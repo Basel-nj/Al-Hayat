@@ -11,27 +11,32 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const Slider = () => {
+const Slider = ({ getActiveIndex }) => {
    const content = [
       {
          id: 1,
          image: image1,
          title: "UNFORGETTABLE HONEYMOON",
+         bg: "image1",
       },
       {
          id: 2,
          image: image2,
          title: "YOUR FAMILY NEEDS A VACATION",
+         bg: "image2",
       },
       {
          id: 3,
          image: image1,
          title: "UNFORGETTABLE HONEYMOON",
+         bg: "image1",
       },
       {
          id: 4,
          image: image2,
          title: "YOUR FAMILY NEEDS A VACATION",
+
+         bg: "image2",
       },
    ];
 
@@ -42,6 +47,10 @@ const Slider = () => {
          loop={true}
          centeredSlides={true}
          centeredSlidesBounds={true}
+         onSlideChangeTransitionEnd={(swiper) => {
+            console.log(swiper.realIndex);
+            getActiveIndex(content[swiper.realIndex].bg);
+         }}
       >
          {content.map((element) => {
             return (
